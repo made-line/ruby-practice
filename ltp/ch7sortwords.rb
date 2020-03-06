@@ -1,13 +1,13 @@
 puts "List some words"
 
+list = []
 
+words = 0
 
-new_array = []
-
-test = gets.chomp 
-until test == "/n"
-  new_array >> test
+until words == ""
+  words = gets.chomp 
+  list << words
 end 
 
-print new_array
+puts list.sort
 
