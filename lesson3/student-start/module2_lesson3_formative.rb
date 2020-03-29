@@ -10,6 +10,7 @@ class Person
     #assign those parameters to instance variables
     self.first_name = first_name
     self.last_name = last_name
+    @@people << self
     #add the created instance (self) to people class variable
   end
 
@@ -18,6 +19,7 @@ class Person
     #accept a `last_name` parameter
     #search the `people` class attribute for instances with the same `last_name`
     #return a collection of matching instances
+       @@people.select {|person| person.last_name == last_name}
   end
 
   #have a `to_s` method to return a formatted string of the person's name
